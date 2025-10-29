@@ -1,0 +1,133 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  /* Productos */
+  .productos {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .productos h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+  
+  .productos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .producto {
+    text-align: center;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+  }
+  
+  /* Ubicación */
+  .ubicacion {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .ubicacion h2 {
+    margin-bottom: 10px;
+  }
+  
+  .mapa {
+    margin-top: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8f8f8;
+  }
+  
+  footer h2 {
+    margin-bottom: 20px;
+  }
+  
+  footer p {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+  }
+  
+  .redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .redes a {
+    color: #333;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .redes a:hover {
+    color: #000;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+    }
+    .menu-toggle {
+      display: block;
+    }
+    .productos-grid {
+      flex-direction: column;
+    }
+  }
