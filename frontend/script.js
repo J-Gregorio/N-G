@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/productos")
+fetch("/productos")
   .then(res => res.json())
   .then(data => {
     const contenedor = document.querySelector(".productos-grid"); 
@@ -21,7 +21,7 @@ fetch("http://localhost:3000/productos")
   .catch(err => console.error("Error al obtener productos:", err));
 
 
-fetch("http://localhost:3000/clima")
+fetch("/clima")
   .then(res => res.json())
   .then(data => {
     const climaDiv = document.getElementById("clima");
