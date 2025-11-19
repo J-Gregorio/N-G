@@ -1,23 +1,27 @@
-
 fetch("http://localhost:3000/productos")
   .then(res => res.json())
   .then(data => {
     const contenedor = document.querySelector(".productos-grid"); 
     contenedor.innerHTML = ""; 
+
     data.forEach(prod => {
       const div = document.createElement("div");
       div.classList.add("producto");
+
       div.innerHTML = `
-        <div class="circle"></div>
-        <p>${prod.nombre} - ${prod.categoria}</p>
+        <img src="imagenes/${prod.imagen}" class="img-producto">
+        <h3>${prod.nombre}</h3>
+        <p>${prod.categoria}</p>
+        <p class="precio">$${prod.precio}</p>
       `;
+
       contenedor.appendChild(div);
     });
   })
   .catch(err => console.error("Error al obtener productos:", err));
 
 
-fetch("http://localhost:3000/clima") 
+fetch("http://localhost:3000/clima")
   .then(res => res.json())
   .then(data => {
     const climaDiv = document.getElementById("clima");
@@ -26,3 +30,6 @@ fetch("http://localhost:3000/clima")
     }
   })
   .catch(err => console.error("Error al obtener clima:", err));
+
+
+  
