@@ -1,14 +1,16 @@
 const mongoose = require("mongoose");
 
-const uri = "mongodb+srv://fcruz121212_db_user:N1qo2ox4N69zZt3b@cluster0.jjumxfx.mongodb.net/NG?retryWrites=true&w=majority&appName=Cluster0";
-
-async function conectarDB() {
-    try {
-        await mongoose.connect(uri);
-        console.log("Conectado a MongoDB Atlas");
-    } catch (error) {
-        console.error("Error al conectar a MongoDB:", error);
-    }
-}
+const conectarDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
+    console.log("MongoDB conectado ✅");
+  } catch (error) {
+    console.error("Error conectando a MongoDB:", error);
+    process.exit(1);
+  }
+};
 
 module.exports = conectarDB;
