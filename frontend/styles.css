@@ -151,4 +151,45 @@
     }
   }
 
+.categorias {
+  padding: 40px;
+  text-align: center;
+}
+
+.categoria {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.categoria h3 {
+  font-size: 24px;
+}
+
+.categoria p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.btn-categoria {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.btn-categoria:hover {
+  background: #000;
+}
+
+
   
