@@ -1,0 +1,27 @@
+<h2>Ropa Casual</h2>
+<div class="productos-grid" id="productos"></div>
+
+<script>
+fetch("/productos")
+  .then(res => res.json())
+  .then(data => {
+    const contenedor = document.getElementById("productos");
+    contenedor.innerHTML = "";
+
+    data
+      .filter(p => p.categoria === "Casual") // 🔥 FILTRA SOLO CASUAL
+      .forEach(prod => {
+        const div = document.createElement("div");
+        div.classList.add("producto");
+
+        div.innerHTML = `
+          <img src="imagenes/${prod.imagen}" class="img-producto">
+          <h3>${prod.nombre}</h3>
+          <p>${prod.categoria}</p>
+          <p class="precio">$${prod.precio}</p>
+        `;
+
+        contenedor.appendChild(div);
+      });
+  });
+</script>
