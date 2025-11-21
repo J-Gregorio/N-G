@@ -54,10 +54,35 @@
   
   .productos-grid {
     display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    gap: 40px;                
+}
+
+  .producto-card {
+    width: 90%;
+    max-width: 900px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    background: #fff;
+}
+
+.producto-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 40px;
-  }
-  
+    gap: 5px;
+}
+
   .producto {
     text-align: center;
   }
